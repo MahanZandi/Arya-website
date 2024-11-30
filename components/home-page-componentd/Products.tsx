@@ -1,10 +1,10 @@
 "use client";
 
-import pishDan from "../public/images/pishDan.png";
-import miyanDan from "../public/images/miyanDan.png";
-import payanDan from "../public/images/payanDan.png"
+import pishDan from "@/public/images/pishDan.png";
+import miyanDan from "@/public/images/miyanDan.png";
+import payanDan from "@/public/images/payanDan.png"
 import "keen-slider/keen-slider.min.css";
-import Product from "./Prouduct";
+import Product from "@/components/home-page-componentd/Prouduct";
 
 
 interface ProductTypes {

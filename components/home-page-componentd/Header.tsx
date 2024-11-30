@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image";
-import MyButton from "./MyButton";
-import NavBar from "./NavBar";
-import AryaImg from "../public/images/AryaImg.png";
+import MyButton from "@/components/home-page-componentd/MyButton";
+import NavBar from "@/components/home-page-componentd/NavBar";
+import AryaImg from "@/public/images/AryaImg.png";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineEast } from "react-icons/md";
 import { useRouter } from "next/navigation";

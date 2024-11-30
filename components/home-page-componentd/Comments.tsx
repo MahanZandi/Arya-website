@@ -1,6 +1,6 @@
-import Comment from "./Comment";
-import personImage1 from "../public/images/person01.jpg";
-import personImage2 from "../public/images/personImage02.jpg";
+import Comment from "@/components/home-page-componentd/Comment";
+import personImage1 from "@/public/images/person01.jpg";
+import personImage2 from "@/public/images/personImage02.jpg";
 
 interface UsersComment {
     id: number;

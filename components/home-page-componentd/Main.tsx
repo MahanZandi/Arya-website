@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aryaCircleImg from '../public/images/chiken.jpg';
+import aryaCircleImg from '@/public/images/chiken.jpg';
 import { AiOutlineComment } from "react-icons/ai";
 import { BsBuildingGear } from "react-icons/bs";
 import { AiOutlineLike } from "react-icons/ai";

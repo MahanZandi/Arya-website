@@ -1,7 +1,7 @@
-import Member from "./Member";
-import maziar from "../public/images/maziar.jpg";
-import rashid from "../public/images/rashid.jpg";
-import rozbe from "../public/images/rozbe.jpg";
+import Member from "@/components/home-page-componentd/Member";
+import maziar from "@/public/images/maziar.jpg";
+import rashid from "@/public/images/rashid.jpg";
+import rozbe from "@/public/images/rozbe.jpg";
 
 const Members:React.FC = () => {
 

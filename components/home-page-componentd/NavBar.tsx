@@ -1,7 +1,7 @@
 "use client"
 import MyButton from "./MyButton";
 import Image from "next/image";
-import AryaLogo from '../public/images/AryaLogoBlack.jpg';
+import AryaLogo from '@/public/images/AryaLogoBlack.jpg';
 import { FiShoppingCart } from "react-icons/fi";
 import { GrContact } from "react-icons/gr";
 import { useRouter } from 'next/navigation'
