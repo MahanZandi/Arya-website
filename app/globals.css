@@ -2,4 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
+.placeholder-black::placeholder { color: black; }
+
+/* animation for validation errors */
+.slide-in-top{-webkit-animation:slide-in-top .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-top .5s cubic-bezier(.25,.46,.45,.94) both}
+ @-webkit-keyframes slide-in-top{0%{-webkit-transform:translateY(-1000px);transform:translateY(-1000px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}@keyframes slide-in-top{0%{-webkit-transform:translateY(-100px);transform:translateY(-100px);opacity:0}100%{-webkit-transform:translateY(0);transform:translateY(0);opacity:1}}
+
+/* animation for buttons */
+@keyframes my-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+  }
+  
+  .animate-custom {
+    animation: my-animation 0.3s ease-in-out;
+  }
+  
+
+ /* برای مرورگرهای وب‌کیت برای حذف استایل پیشفرض اینپوت تایپ نامبر (Chrome, Safari, Edge) */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+};
+/* برای فایرفاکس */
+input[type=number] {
+    -moz-appearance: textfield;
+};
+
+
+/* loading */
+.lds-dual-ring,
+.lds-dual-ring:after {
+  box-sizing: border-box;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6.4px solid currentColor;
+  border-color: #009379 transparent #009379 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.scroll-thin{
+  scrollbar-width: thin;
+}
+
+.scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent; 
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.scroll-container {
+  height: 100vh; 
+  scroll-snap-type: y mandatory; 
+  overflow-y: scroll; /* فعال کردن اسکرول عمودی */
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start; 
+}
+
+
+
+.bgCover1{
+  background-image: url(../public/images/AryaView0.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.space-x{
+  @apply px-[32px] md:px-[30px] xl:px-[55px]
+}
+
+
+
+
+
+
+
+
 
