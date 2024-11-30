@@ -1,4 +1,4 @@
-import MyButton from "../MyButton";
+import MyButton from "@/components/home-page-componentd/MyButton";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdOutlineEast } from "react-icons/md";
 import { useRouter } from "next/navigation";

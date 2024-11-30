@@ -1,5 +1,5 @@
 "use client"
-import MyButton from "../MyButton";
+import MyButton from "@/components/home-page-componentd/MyButton";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import AryaLogo from '@/public/images/AryaLogoBlack.jpg';
