@@ -2,6 +2,7 @@
 import AboutNavBar from '@/components/about-components/AboutNavBar';
 import AboutHeader from './AboutHeader';
 import AboutMembers from '@/components/about-components/AboutMembers';
+import Footer from '../home-page-componentd/Footer';
 
 const Slider = ({noBorderBtn, lightGreenBtn, zirconBtn, darkGreenBtn}:any) => {
   return (
@@ -38,11 +39,7 @@ const Slider = ({noBorderBtn, lightGreenBtn, zirconBtn, darkGreenBtn}:any) => {
                     <AboutMembers/>
                 </div>
             </div>
-            <div className='section'>
-                <div className='bg-Alto'>
 
-                </div>
-            </div>
         </div>
     </div>
   );

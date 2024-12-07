@@ -1,6 +1,5 @@
 "use client"
 import { useForm } from 'react-hook-form';
-import React ,{ useState, useEffect } from 'react';
 import { IoPersonSharp } from "react-icons/io5";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { BiPhoneCall } from "react-icons/bi";
@@ -24,10 +23,10 @@ const Form:React.FC = ({darkGreenBtn}:any) => {
     <form onSubmit={handleSubmit(onSubmit)}
           className="py-[60px]">
         <div className="grid grid-rows-5 gap-[15px] sm:gap-[10px] ">
-            <div className=" flex items-center border border-gray-400 h-[60px] rounded-3xl ">
+            <div className={` flex items-center border ${errors.name ? 'border-red-500' : 'border-gray-400'} h-[60px] rounded-3xl `}>
                 <section className="flex w-full justify-center items-center pr-5">
                     <input 
-                        className=" h-[58px] border-gray-400  placeholder-black outline-none p-5 flex flex-1 placeholder-animate  " 
+                        className={` h-[58px] border-gray-400 ${errors.name ? 'placeholder-red-500' : 'placeholder-black'} outline-none p-5 flex flex-1 placeholder-animate `} 
                         placeholder="نام و نام خانوادگی"
                         type="text"  
                         name='name'
@@ -41,14 +40,14 @@ const Form:React.FC = ({darkGreenBtn}:any) => {
                         />
                     <div className="border-r-2 h-5"/>
                     <div className="p-5 pr-2">
-                        <IoPersonSharp className="text-Observatory " size={20}/>
+                        <IoPersonSharp className={`${errors.name ? 'text-red-500' : 'text-Observatory'} `} size={20}/>
                     </div>
                 </section>
             </div>
-            <div className=" flex items-center border border-gray-400 h-[60px] rounded-3xl ">
+            <div className={` flex items-center border ${errors.email ? 'border-red-500' : 'border-gray-400'} h-[60px] rounded-3xl `}>
                 <section className="flex w-full justify-center items-center pr-5">
                     <input 
-                        className=" h-[58px] border-gray-400 placeholder-black outline-none p-5 flex flex-1 placeholder-animate  " 
+                        className={` h-[58px] border-gray-400 ${errors.email ? 'placeholder-red-500' : 'placeholder-black'} outline-none p-5 flex flex-1 placeholder-animate `}
                         placeholder="ایمیل شما"
                         type="email"  
                         name='email'
@@ -62,14 +61,14 @@ const Form:React.FC = ({darkGreenBtn}:any) => {
                         />
                     <div className="border-r-2 h-5"/>
                     <div className="p-5 pr-2">
-                        <MdOutlineAttachEmail className="text-Observatory " size={20}/>
+                        <MdOutlineAttachEmail className={`${errors.email ? 'text-red-500' : 'text-Observatory'} `} size={20}/>
                     </div>
                 </section>
             </div>
-            <div className=" flex items-center border border-gray-400 h-[60px] rounded-3xl ">
+            <div className={` flex items-center border ${errors.phone ? 'border-red-500' : 'border-gray-400'} h-[60px] rounded-3xl `}>
                 <section className="flex w-full justify-center items-center pr-5">
                     <input 
-                        className=" h-[58px] border-gray-400 placeholder-black outline-none p-5 flex flex-1 placeholder-animate  " 
+                        className={` h-[58px] border-gray-400 ${errors.phone ? 'placeholder-red-500' : 'placeholder-black'} outline-none p-5 flex flex-1 placeholder-animate `} 
                         placeholder="شماره تماس"
                         type="number"
                         name='phone'
@@ -83,14 +82,14 @@ const Form:React.FC = ({darkGreenBtn}:any) => {
                         />
                     <div className="border-r-2 h-5"/>
                     <div className="p-5 pr-2">
-                        <BiPhoneCall className="text-Observatory " size={22}/>
+                        <BiPhoneCall className={`${errors.phone ? 'text-red-500' : 'text-Observatory'} `} size={22}/>
                     </div>
                 </section>
             </div>
-            <div className=" flex items-center border border-gray-400 h-[60px] rounded-3xl ">
+            <div className={` flex items-center border ${errors.title ? 'border-red-500' : 'border-gray-400'} h-[60px] rounded-3xl `}>
                 <section className="flex w-full justify-center items-center pr-5">
                     <input 
-                        className=" h-[58px] border-gray-400 placeholder-black outline-none p-5 flex flex-1 placeholder-animate  " 
+                        className={` h-[58px] border-gray-400 ${errors.title ? 'placeholder-red-500' : 'placeholder-black'} outline-none p-5 flex flex-1 placeholder-animate `}
                         placeholder="عنوان"
                         type="text"
                         name='title'
@@ -104,14 +103,14 @@ const Form:React.FC = ({darkGreenBtn}:any) => {
                         />
                     <div className="border-r-2 h-5"/>
                     <div className="p-5 pr-2">
-                        <LuSubtitles className="text-Observatory " size={20}/>
+                        <LuSubtitles className={`${errors.title ? 'text-red-500' : 'text-Observatory'} `} size={20}/>
                     </div>
                 </section>
             </div>
-            <div className=" flex items-center border border-gray-400 h-[60px] rounded-3xl ">
+            <div className={` flex items-center border ${errors.discription ? 'border-red-500' : 'border-gray-400'} h-[60px] rounded-3xl `}>
                 <section className="flex w-full justify-center items-center pr-5">
                     <textarea 
-                        className=" h-[58px] border-gray-400  resize-none placeholder-black outline-none p-5 flex flex-1 placeholder-animate " 
+                        className={` h-[58px] border-gray-400 ${errors.discription ? 'placeholder-red-500' : 'placeholder-black'} outline-none p-5 flex flex-1 placeholder-animate `}
                         placeholder="توضیحات"
                         name='discription'
                         {...register("discription", {
@@ -124,7 +123,7 @@ const Form:React.FC = ({darkGreenBtn}:any) => {
                         />
                     <div className="border-r-2 h-5"/>
                     <div className="p-5 pr-2">
-                        <FaRegCommentDots className="text-Observatory " size={20}/>
+                        <FaRegCommentDots className={`${errors.discription ? 'text-red-500' : 'text-Observatory'} `} size={20}/>
                     </div>
                 </section>
             </div>
